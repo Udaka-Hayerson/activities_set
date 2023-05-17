@@ -37,6 +37,18 @@
         android:textSize="66sp"
         app:fontFamily="sans-serif-black" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="380dp"
+        android:layout_height="100dp"
+        android:textSize="66sp"
+        app:fontFamily="sans-serif-black" />
 
 
 </LinearLayout>
