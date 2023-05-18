@@ -2,4 +2,18 @@
     <string name="app_name">ActivityExample</string>
     <string name="fuck_android">F_CK ANDROID</string>
     <string name="say_hello">SAY HELLO</string>
+    <string name="hi_bro">HELLO BRO</string>
+    <string name="its_works">ITS WORKS</string>
+    <string name="first_name">Enter first name</string>
+    <string name="name">Enter your name</string>
+    <string name="login">Enter your login</string>
+    <string name="password">Enter your password</string>
+    <array name="items">
+        <item>Porsche</item>
+        <item>Maseratti</item>
+        <item>Ferrari</item>
+        <item>Lamborghini</item>
+        <item>Mersedes-Benz</item>
+        <item>BMW</item>
+    </array>
 </resources>

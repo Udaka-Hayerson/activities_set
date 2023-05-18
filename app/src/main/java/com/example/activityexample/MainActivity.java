@@ -23,8 +23,8 @@ public class MainActivity extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String s = "it's works";
-                text_2.setText(s);
+                String its_works = getResources().getString(R.string.its_works);
+                text_2.setText(its_works);
                 text_2.setTextColor(getResources().getColor(R.color.purple_200));
                 text_2.setBackgroundColor(getResources().getColor(R.color.black));
             }
@@ -33,7 +33,8 @@ public class MainActivity extends Activity {
     }
 
     public void click(View view){
-        text.setText("HELLO BRO");
+        String hi_bro = getResources().getString(R.string.hi_bro);
+        text.setText(hi_bro);
         text.setTextColor(getResources().getColor(R.color.purple_200));
         text.setBackgroundColor(getResources().getColor(R.color.black));
 

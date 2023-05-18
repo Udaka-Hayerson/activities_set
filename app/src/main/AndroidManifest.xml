@@ -14,8 +14,13 @@
         android:theme="@style/Theme.ActivityExample"
         tools:targetApi="31" >
     <activity
-        android:name=".MainActivity"
+        android:name=".HomeworkEditActivity"
         android:exported="true">
+        <!--        android:name=".EditActivity"-->
+
+        <!--        android:name=".AlseMainActivity"-->
+<!--        android:name=".EditActivity"-->
+
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
