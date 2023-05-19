@@ -16,11 +16,6 @@
     <activity
         android:name=".HomeworkEditActivity"
         android:exported="true">
-        <!--        android:name=".EditActivity"-->
-
-        <!--        android:name=".AlseMainActivity"-->
-<!--        android:name=".EditActivity"-->
-
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 

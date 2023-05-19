@@ -4,11 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/drawable/ic_hot_deal.xml" value="0.2985" />
+        <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2985" />
         <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/drawable/ic_shop_cart.xml" value="0.2985" />
         <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/layout-land/main.xml" value="0.32760141093474426" />
         <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/layout/alse_main_activity.xml" value="0.33" />
+        <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/layout/car_item_layout.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/layout/edit_activity.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/layout/homework_edit_activity.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/layout/invisible_image_activity.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/layout/list_layout.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Nickolas/AndroidStudioProjects/ActivityExample/app/src/main/res/layout/main.xml" value="0.25" />
       </map>
     </option>
