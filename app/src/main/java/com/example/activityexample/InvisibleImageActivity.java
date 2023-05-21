@@ -17,7 +17,7 @@ public class InvisibleImageActivity extends Activity {
         image = (ImageView) findViewById(R.id.imageView);
     }
     public void visibleImage(View view){
-        if (imageCount%2 == 0) {
+        if (image.getVisibility() == View.INVISIBLE) {
             image.setVisibility(View.VISIBLE);
         } else {
             image.setVisibility(View.INVISIBLE);

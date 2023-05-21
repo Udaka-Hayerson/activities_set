@@ -12,7 +12,6 @@ import com.example.activityexample.list_objects.pojo.Car;
 import java.util.List;
 
 public class Adapter extends BaseAdapter {
-
     private List<Car> cars;
     private LayoutInflater layoutInflater;
 
