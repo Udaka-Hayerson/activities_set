@@ -4,10 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
-
-import java.util.Arrays;
 
 public class GridCalculatorActivity extends Activity {
     private TextView text;
@@ -15,7 +12,7 @@ public class GridCalculatorActivity extends Activity {
     public String second_operand = "";
     public int operation = 0;
     public String buffer = "";
-    int result = 0;
+    double result = 0;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,23 +26,23 @@ public class GridCalculatorActivity extends Activity {
         second_operand = buffer.substring((first_operand).length()+1);
         switch (operation){
             case 0: {
-                result = Integer.parseInt(first_operand) * Integer.parseInt(second_operand);
+                result = Double.parseDouble(first_operand) * Double.parseDouble(second_operand);
                 text.setText(String.valueOf(result));
                 break;
             }
             case 1: {
-                result = Integer.parseInt(first_operand) / Integer.parseInt(second_operand);
+                result = Double.parseDouble(first_operand) / Double.parseDouble(second_operand);
                 text.setText(String.valueOf(result));
                 break;
 
             }
             case 2: {
-                result = Integer.parseInt(first_operand) + Integer.parseInt(second_operand);
+                result = Double.parseDouble(first_operand) + Double.parseDouble(second_operand);
                 text.setText(String.valueOf(result));
                 break;
             }
             case 3: {
-                result = Integer.parseInt(first_operand) - Integer.parseInt(second_operand);
+                result = Double.parseDouble(first_operand) - Double.parseDouble(second_operand);
                 text.setText(String.valueOf(result));
                 break;
             }
@@ -62,7 +59,6 @@ public class GridCalculatorActivity extends Activity {
     private void extractedO(String str, int operand) {
         this.operation = operand;
         first_operand = text.getText().toString();
-//        f_oper_length = text.getText().toString().length();
         text.setText(buffer + str);
         buffering();
     }

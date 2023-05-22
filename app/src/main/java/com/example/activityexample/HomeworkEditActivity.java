@@ -43,7 +43,7 @@ public class HomeworkEditActivity extends Activity {
                 textView.setBackgroundColor(getResources().getColor(R.color.teal_700));
                 if(count%2 == 0){
                     textView.setText(new StringBuilder()
-                            .append("Your name/login/password ").append(name.getText().toString())
+                            .append("Your n/l/p ").append(name.getText().toString())
                             .append("/").append(login.getText().toString()).append("/")
                             .append(password.getText().toString()).toString());
                     textView.setTextColor(getResources().getColor(R.color.purple_200));
