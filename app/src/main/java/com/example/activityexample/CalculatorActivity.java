@@ -22,7 +22,6 @@ public class CalculatorActivity extends Activity {
     }
     public void mul(View view){
         result.setText(String.valueOf(parser(editTextOne) * parser(editTextTwo)));
-        ;
     }
     public void div(View view){
         result.setText(String.valueOf(parser(editTextOne) / parser(editTextTwo)));
