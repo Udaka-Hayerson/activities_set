@@ -23,7 +23,7 @@ public class DinamicLayoutActivity extends AppCompatActivity {
 
         ImageView pic = new ImageView(this);
 
-        pic.setImageResource(R.drawable.img);
+        pic.setImageResource(R.drawable.img_0);
 
         pic.setLayoutParams(new ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT));
         pic.setAdjustViewBounds(true);
