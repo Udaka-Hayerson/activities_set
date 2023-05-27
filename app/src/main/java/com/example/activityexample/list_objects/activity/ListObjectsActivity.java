@@ -2,15 +2,11 @@ package com.example.activityexample.list_objects.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.widget.ListView;
-
 import androidx.annotation.Nullable;
-
 import com.example.activityexample.R;
 import com.example.activityexample.list_objects.adapter.Adapter;
 import com.example.activityexample.list_objects.pojo.Car;
-
 import java.util.ArrayList;
 import java.util.List;
 

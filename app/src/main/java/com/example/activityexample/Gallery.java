@@ -15,7 +15,6 @@ public class Gallery extends Activity {
     ImageView image2;
     ImageView image3;
     ImageView image4;
-    ImageView buffer;
     ArrayList<ImageView> image_list;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
