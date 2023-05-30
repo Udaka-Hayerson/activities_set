@@ -1,6 +1,7 @@
 package com.example.activityexample;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,8 @@ import androidx.annotation.Nullable;
 public class TicTacToeActivity extends Activity {
     String x = "❌";
     String o = "⭕";
+    String x_player;
+    String o_player;
     Button btn00;
     Button btn01;
     Button btn02;
@@ -23,6 +26,7 @@ public class TicTacToeActivity extends Activity {
     TextView speaker_xo;
     boolean x_or_o = true;
     int count = 0;
+    Intent intent;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,13 +41,24 @@ public class TicTacToeActivity extends Activity {
         btn21 = (Button) findViewById(R.id.table_cell_21);
         btn22 = (Button) findViewById(R.id.table_cell_22);
         speaker_xo = (TextView) findViewById(R.id.presenter);
-        speaker_xo.setText("PLAYER " + x + " IS PLAYING");
+        intent = getIntent();
+        x_player = intent.getStringExtra("f_player") + x;
+        o_player = intent.getStringExtra("s_player") + o;
+        speaker_xo.setText("PLAYER " + x_player + " IS PLAYING");
+
+
 
 
     }
+    public void restartGame(View view){
+        Toast.makeText(this, "come back to play again", Toast.LENGTH_LONG).show();
+        clearTablwCells();
+        speaker_xo.setText("");
+        Intent intent_back = new Intent(this, TicTacToeMenu.class);
+        startActivity(intent_back);
+    }
 
     void clearTablwCells(){
-        speaker_xo.setText("PLAYER " + x + " IS PLAYING");
         x_or_o = true;
         count = 0;
         btn00.setText("");
@@ -55,34 +70,35 @@ public class TicTacToeActivity extends Activity {
         btn20.setText("");
         btn21.setText("");
         btn22.setText("");
+        speaker_xo.setText("PLAYER " + x_player + " IS PLAYING");
     }
 
 
-    public void winVerification(String s) {
+    public void winVerification(String s, String player) {
 
        if(btn00.getText().equals(s) && btn01.getText().equals(s) && btn02.getText().equals(s)){
-           Toast.makeText(this, "PLAYER " + s + " WON!!!", Toast.LENGTH_LONG).show();
+           Toast.makeText(this, "PLAYER " + player + " WON!!!", Toast.LENGTH_LONG).show();
            clearTablwCells();
        } else if(btn10.getText().equals(s) && btn11.getText().equals(s) && btn12.getText().equals(s)){
-           Toast.makeText(this, "PLAYER " + s + " WON!!!", Toast.LENGTH_LONG).show();
+           Toast.makeText(this, "PLAYER " + player + " WON!!!", Toast.LENGTH_LONG).show();
            clearTablwCells();
        } else if(btn20.getText().equals(s) && btn21.getText().equals(s) && btn22.getText().equals(s)){
-           Toast.makeText(this, "PLAYER " + s + " WON!!!", Toast.LENGTH_LONG).show();
+           Toast.makeText(this, "PLAYER " + player + " WON!!!", Toast.LENGTH_LONG).show();
            clearTablwCells();
        } else if(btn00.getText().equals(s) && btn10.getText().equals(s) && btn20.getText().equals(s)){
-           Toast.makeText(this, "PLAYER " + s + " WON!!!", Toast.LENGTH_LONG).show();
+           Toast.makeText(this, "PLAYER " + player + " WON!!!", Toast.LENGTH_LONG).show();
            clearTablwCells();
        } else if(btn01.getText().equals(s) && btn11.getText().equals(s) && btn21.getText().equals(s)){
-           Toast.makeText(this, "PLAYER " + s + " WON!!!", Toast.LENGTH_LONG).show();
+           Toast.makeText(this, "PLAYER " + player + " WON!!!", Toast.LENGTH_LONG).show();
            clearTablwCells();
        } else if(btn02.getText().equals(s) && btn12.getText().equals(s) && btn22.getText().equals(s)){
-           Toast.makeText(this, "PLAYER " + s + " WON!!!", Toast.LENGTH_LONG).show();
+           Toast.makeText(this, "PLAYER " + player + " WON!!!", Toast.LENGTH_LONG).show();
            clearTablwCells();
        } else if(btn00.getText().equals(s) && btn11.getText().equals(s) && btn22.getText().equals(s)){
-           Toast.makeText(this, "PLAYER " + s + " WON!!!", Toast.LENGTH_LONG).show();
+           Toast.makeText(this, "PLAYER " + player + " WON!!!", Toast.LENGTH_LONG).show();
            clearTablwCells();
        } else if(btn20.getText().equals(s) && btn11.getText().equals(s) && btn02.getText().equals(s)){
-           Toast.makeText(this, "PLAYER " + s + " WON!!!", Toast.LENGTH_LONG).show();
+           Toast.makeText(this, "PLAYER " + player + " WON!!!", Toast.LENGTH_LONG).show();
            clearTablwCells();
        } else {
            judge();
@@ -92,14 +108,14 @@ public class TicTacToeActivity extends Activity {
     public void judge() {
         if(count == 9){
             clearTablwCells();
-            Toast.makeText(this, "GAME OVER", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "draw in the game", Toast.LENGTH_LONG).show();
             return;
         }
         x_or_o = !x_or_o;
         if(x_or_o){
-            speaker_xo.setText("PLAYER " + x + " IS PLAYING");
+            speaker_xo.setText("PLAYER " + x_player + " IS PLAYING");
         } else {
-            speaker_xo.setText("PLAYER " + o + " IS PLAYING");
+            speaker_xo.setText("PLAYER " + o_player + " IS PLAYING");
         }
     }
 
@@ -108,90 +124,90 @@ public class TicTacToeActivity extends Activity {
         if (v.getId() == R.id.table_cell_00) {
             if (x_or_o) {
                 btn00.setText("❌");
-                winVerification("❌");
+                winVerification("❌", x_player);
             } else {
                 btn00.setText("⭕");
-                winVerification("⭕");
+                winVerification("⭕", o_player);
             }
             return;
         }
         if (v.getId() == R.id.table_cell_01) {
             if (x_or_o) {
                 btn01.setText("❌");
-                winVerification("❌");
+                winVerification("❌", x_player);
             } else {
                 btn01.setText("⭕");
-                winVerification("⭕");
+                winVerification("⭕", o_player);
             }
             return;
         }
         if (v.getId() == R.id.table_cell_02) {
             if (x_or_o) {
                 btn02.setText("❌");
-                winVerification("❌");
+                winVerification("❌", x_player);
             } else {
                 btn02.setText("⭕");
-                winVerification("⭕");
+                winVerification("⭕", o_player);
             }
             return;
         }
         if (v.getId() == R.id.table_cell_10) {
             if (x_or_o) {
                 btn10.setText("❌");
-                winVerification("❌");
+                winVerification("❌", x_player);
             } else {
                 btn10.setText("⭕");
-                winVerification("⭕");
+                winVerification("⭕", o_player);
             }
             return;
         }
         if (v.getId() == R.id.table_cell_11) {
             if (x_or_o) {
                 btn11.setText("❌");
-                winVerification("❌");
+                winVerification("❌", x_player);
             } else {
                 btn11.setText("⭕");
-                winVerification("⭕");
+                winVerification("⭕", o_player);
             }
             return;
         }
         if (v.getId() == R.id.table_cell_12) {
             if (x_or_o) {
                 btn12.setText("❌");
-                winVerification("❌");
+                winVerification("❌", x_player);
             } else {
                 btn12.setText("⭕");
-                winVerification("⭕");
+                winVerification("⭕", o_player);
             }
             return;
         }
         if (v.getId() == R.id.table_cell_20) {
             if (x_or_o) {
                 btn20.setText("❌");
-                winVerification("❌");
+                winVerification("❌", x_player);
             } else {
                 btn20.setText("⭕");
-                winVerification("⭕");
+                winVerification("⭕", o_player);
             }
             return;
         }
         if (v.getId() == R.id.table_cell_21) {
             if (x_or_o) {
                 btn21.setText("❌");
-                winVerification("❌");
+                winVerification("❌", x_player);
             } else {
                 btn21.setText("⭕");
-                winVerification("⭕");
+                winVerification("⭕", o_player);
             }
             return;
         }
         if (v.getId() == R.id.table_cell_22) {
             if (x_or_o) {
                 btn22.setText("❌");
-                winVerification("❌");
+                winVerification("❌", x_player);
             } else {
                 btn22.setText("⭕");
-                winVerification("⭕");
+                winVerification("⭕", o_player);
             }
         }
     }
