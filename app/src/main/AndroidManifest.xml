@@ -14,7 +14,7 @@
         android:theme="@style/Theme.ActivityExample"
         tools:targetApi="31">
         <activity
-            android:name=".todo_app.MainTODOActivity"
+            android:name=".from_the_first_to_the_fourth_lesson.todo_app.MainTODOActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".TicTacToeActivity" />
+        <activity android:name=".from_the_first_to_the_fourth_lesson.heap_of_activities.TicTacToeActivity" />
 
     </application>
 

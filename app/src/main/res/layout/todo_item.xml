@@ -21,7 +21,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="12sp"
-                android:textSize="18sp"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:text="Item Title"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycleer_sub_todo"
