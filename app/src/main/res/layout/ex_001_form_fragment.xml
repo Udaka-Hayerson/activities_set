@@ -6,26 +6,32 @@
     <TableRow>
         <TextView
             android:text="login:"
+            android:textSize="20sp"
             android:layout_column="0"/>
         <EditText
+            android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/login"/>
+            android:textSize="20sp"
+            android:hint="login"
+            android:ems="10" />
 
     </TableRow>
 
     <TableRow>
         <TextView
             android:text="Password:"
+            android:textSize="20sp"
             android:layout_column="0"/>
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/password"/>
+            android:textSize="20sp"
+            android:hint="login"
+            android:ems="10" />
 
     </TableRow>
 </TableLayout>

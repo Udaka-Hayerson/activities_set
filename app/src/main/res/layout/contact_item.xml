@@ -5,15 +5,20 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/firstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/textViewVW"/>
-    <Button
-        android:id="@+id/btn_answer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="login"
-        android:gravity="center" />
+        android:text="First Name" />
 
+    <TextView
+        android:id="@+id/lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name" />
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="phoneNumber" />
 </LinearLayout>

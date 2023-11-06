@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <EditText
+        android:id="@+id/editFirstName"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="enter First Name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/editLastName"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="enter Last Name"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/editFirstName"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/editPhoneNumber"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="enter Phone Number"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/editLastName"
+        android:layout_alignParentStart="true"/>
+
+</RelativeLayout>
